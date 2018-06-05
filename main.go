@@ -78,7 +78,7 @@ func timer(){
 		case <-c:
 			lastDefender.Lock()
 			if atomic.LoadUint64(&last)!=0{
-				atomic.AddUint64(&last,^uint64(1-1))
+				atomic.AddUint64(&last,^uint64(0))
 			//	fmt.Println("Timer lost 1 sec.")
 			}else if deviceEnable{
 				deviceEnable = false
